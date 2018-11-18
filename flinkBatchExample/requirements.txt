@@ -1,0 +1,3 @@
+Java 8.x
+Maven 3.0.4 (or higher)
+docker/docker-compose

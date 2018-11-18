@@ -1,0 +1,13 @@
+version: "2.2"
+services:
+  local-cluster:
+    image: flink-job
+    build: .
+    container_name: flink-container
+    ports:
+      - "8081:8081"
+      - "6123:6123"
+    volumes:
+      - ./data:/opt/data
+      - ./out:/opt/out
+    command: flink run -c org.example.flink.BatchJob /opt/job.jar
